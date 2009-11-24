@@ -1,47 +1,20 @@
-Services_Gravatar
-=================
+h1. Services_Gravatar
 
-Introduction
-------------
+h2. Introduction
 
-Services_Gravatar is an interface to the gravatar service.
+Services_Gravatar is an interface to the "Gravatar":http://www.gravatar.com service.
 
 A gravatar, or globally recognized avatar, is quite simply an avatar image that follows you from blog to blog appearing beside your name when you comment on gravatar enabled sites.
 
 
-Installation
-------------
+h2. Installation
 
-Install PEAR, fire up a console and run:
+Install "PEAR":http://pear.php.net, fire up a console and run:
 $ pear install -f http://cloud.github.com/downloads/izimobil/Services_Gravatar/Services_Gravatar-0.1.0.tgz
 
 To uninstall Services_Gravatar just do:
 $ pear uninstall Services_Gravatar
 
-Usage example
--------------
+h2. Example
 
-<?php
-
-/**
- * Include the Services_Gravatar class.
- */
-require_once 'Services/Gravatar.php';
-
-$gravatar = new Services_Gravatar('johndoe@example.com', array(
-    'size'   => 180,
-    'rating' => Services_Gravatar::RATING_G,
-));
-
-?>
-<html>
-<head>
-    <title>Gravatar example</title>
-</head>
-<body>
-    <h2>Avatar url</h2>
-    <p><a href="<?php echo $gravatar->getURL() ?>"><?php echo $gravatar->getURL() ?></a></p>
-    <h2>Avatar html</h2>
-    <p><?php echo $gravatar->getHtml(array('title' => 'John Doe', 'alt' => 'John Doe avatar')) ?></p>
-</body>
-</html>
+Here's a simple "example":http://github.com/izimobil/Services_Gravatar/blob/master/examples/example-01.php
