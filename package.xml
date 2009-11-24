@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package 
+    packagerversion="1.7.2" 
+    version="2.0" 
+    xmlns="http://pear.php.net/dtd/package-2.0" 
+    xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0
+                        http://pear.php.net/dtd/tasks-1.0.xsd
+                        http://pear.php.net/dtd/package-2.0
+                        http://pear.php.net/dtd/package-2.0.xsd"
+>
+ <name>Services_Gravatar</name>
+ <channel>pear.php.net</channel>
+ <summary>PHP5 interface to the Gravatar API</summary>
+ <description>
+ <![CDATA[
+Services_Gravatar is an interface to the gravatar service.
+
+A gravatar, or globally recognized avatar, is quite simply an avatar image
+that follows you from blog to blog appearing beside your name when you
+comment on gravatar enabled sites.
+ ]]>
+ </description>
+ <lead>
+  <name>David Jean Louis</name>
+  <user>izi</user>
+  <email>izimobil@gmail.com</email>
+  <active>yes</active>
+ </lead>
+ <date>2009-02-02</date>
+ <version>
+  <release>0.1.0</release>
+  <api>0.1.0</api>
+ </version>
+ <stability>
+  <release>alpha</release>
+  <api>alpha</api>
+ </stability>
+ <license uri="http://www.opensource.org/licenses/mit-license.html">MIT</license>
+ <notes>Initial release</notes>
+ <contents>
+  <dir name="/">
+   <file name="Services/Gravatar.php" role="php">
+    <tasks:replace from="@package_version@" to="version" type="package-info" />
+   </file>
+   <file name="Services/Gravatar/Exception.php" role="php">
+    <tasks:replace from="@package_version@" to="version" type="package-info" />
+   </file>
+   <file name="examples/example-01.php" role="doc"/>
+   <file name="tests/AllTests.php" role="test">
+    <tasks:replace from="@package_version@" to="version" type="package-info" />
+   </file>
+   <file name="tests/test_exceptions.phpt" role="test" />
+   <file name="tests/test_getdata.phpt" role="test" />
+   <file name="tests/test_gethtml.phpt" role="test" />
+   <file name="tests/test_geturl.phpt" role="test" />
+   <file name="tests/data/gravatar_image.jpg" role="test" />
+   <file name="tests/data/valid_image.png" role="test" />
+  </dir>
+ </contents>
+ <dependencies>
+  <required>
+   <php>
+    <min>5.2.0</min>
+   </php>
+   <pearinstaller>
+    <min>1.4.0b1</min>
+   </pearinstaller>
+   <package>
+    <name>HTTP_Request2</name>
+    <channel>pear.php.net</channel>
+    <min>0.1.0</min>
+   </package>
+  </required>
+ </dependencies>
+ <phprelease />
+ <changelog>
+ </changelog>
+</package>
