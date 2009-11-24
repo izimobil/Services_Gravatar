@@ -1,0 +1,20 @@
+h1. Services_Gravatar
+
+h2. Introduction
+
+Services_Gravatar is an interface to the "Gravatar":http://www.gravatar.com service.
+
+A gravatar, or globally recognized avatar, is quite simply an avatar image that follows you from blog to blog appearing beside your name when you comment on gravatar enabled sites.
+
+
+h2. Installation
+
+Install "PEAR":http://pear.php.net, fire up a console and run:
+$ pear install -f http://cloud.github.com/downloads/izimobil/Services_Gravatar/Services_Gravatar-0.1.0.tgz
+
+To uninstall Services_Gravatar just do:
+$ pear uninstall Services_Gravatar
+
+h2. Example
+
+Here's a simple "example":http://github.com/izimobil/Services_Gravatar/blob/master/examples/example-01.php
