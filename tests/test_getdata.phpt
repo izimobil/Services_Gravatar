@@ -11,9 +11,9 @@ $livetest = getenv('SERVICES_GRAVATAR_LIVETEST');
 
 $gravatar = new Services_Gravatar('izimobil@gmail.com', array(
     'size'      => 120,
-    'extension' => 'png',
+    'extension' => 'jpg',
 ));
-$imgdata  = file_get_contents(dirname(__FILE__) . '/data/valid_image.png');
+$imgdata  = file_get_contents(dirname(__FILE__) . '/data/valid_image.jpg');
 if (!$livetest) {
     $mock = new HTTP_Request2_Adapter_Mock();
     $resp = new HTTP_Request2_Response('HTTP/1.1 200 Ok', false);
