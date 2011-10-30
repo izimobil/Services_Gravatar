@@ -15,7 +15,7 @@
  * @package   Services_Gravatar
  * @author    David Jean Louis <izi@php.net>
  * @copyright 2008-2009 David Jean Louis
- * @license   http://opensource.org/licenses/mit-license.php MIT License 
+ * @license   http://opensource.org/licenses/mit-license.php MIT License
  * @version   CVS: $Id$
  * @link      http://pear.php.net/package/Services_Gravatar
  * @link      http://en.gravatar.com/site/implement/

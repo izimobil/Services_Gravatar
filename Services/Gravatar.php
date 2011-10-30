@@ -15,7 +15,7 @@
  * @package   Services_Gravatar
  * @author    David Jean Louis <izi@php.net>
  * @copyright 2008-2009 David Jean Louis
- * @license   http://opensource.org/licenses/mit-license.php MIT License 
+ * @license   http://opensource.org/licenses/mit-license.php MIT License
  * @version   CVS: $Id$
  * @link      http://pear.php.net/package/Services_Gravatar
  * @link      http://en.gravatar.com/site/implement/
@@ -27,7 +27,7 @@
  * Dependencies.
  */
 require_once 'Services/Gravatar/Exception.php';
- 
+
 /**
  * PHP5 interface to {@link http://www.gravatar.com Gravatar} service.
  *
@@ -35,7 +35,7 @@ require_once 'Services/Gravatar/Exception.php';
  * @package   Services_Gravatar
  * @author    David Jean Louis <izi@php.net>
  * @copyright 2008-2009 David Jean Louis
- * @license   http://opensource.org/licenses/mit-license.php MIT License 
+ * @license   http://opensource.org/licenses/mit-license.php MIT License
  * @version   Release: @package_version@
  * @link      http://pear.php.net/package/Services_Gravatar
  * @link      http://en.gravatar.com/site/implement/
@@ -44,7 +44,7 @@ require_once 'Services/Gravatar/Exception.php';
 class Services_Gravatar
 {
     // constants {{{
-     
+
     /**#@+
      * Rating constants, default is RATING_G.
      */
@@ -53,7 +53,7 @@ class Services_Gravatar
     const RATING_R  = 'r';
     const RATING_X  = 'x';
     /**#@-*/
-     
+
     /**#@+
      * Default image types.
      */
@@ -61,7 +61,7 @@ class Services_Gravatar
     const DEFAULT_MONSTERID = 'monsterid';
     const DEFAULT_WAVATAR   = 'wavatar';
     /**#@-*/
-    
+
     // }}}
     // properties {{{
 
@@ -73,7 +73,7 @@ class Services_Gravatar
     public $url = 'http://www.gravatar.com/avatar/';
 
     /**
-     * The HTTP_Request2 instance, you can customize the request if you want to 
+     * The HTTP_Request2 instance, you can customize the request if you want to
      * (proxy, auth etc...) with the get/setRequest() methods.
      *
      * @var HTTP_Request2 $request
@@ -94,12 +94,12 @@ class Services_Gravatar
      * Optional parameters (size, rating, default...).
      * The array can have the following keys:
      *   - size: an integer between 1 and 512 (pixels), the default is 80;
-     *   - rating: one of the rating constants (you can pass the string 
-     *     directly but it is recommended to use the provided constants), the 
+     *   - rating: one of the rating constants (you can pass the string
+     *     directly but it is recommended to use the provided constants), the
      *     default is Services_Gravatar::RATING_G;
-     *   - default: a default image path or one of the default constants, if 
+     *   - default: a default image path or one of the default constants, if
      *     no default is given, the blue 'G' default image is used;
-     *   - extension: if given, the extension to be added at the end of 
+     *   - extension: if given, the extension to be added at the end of
      *     the email hash (useful for some places on the internet which
      *     require that image URLs have filename extensions).
      *
@@ -115,9 +115,9 @@ class Services_Gravatar
 
     // }}}
     // __construct() {{{
-    
+
     /**
-     * Constructor, you must pass a valid email and optionally an array of 
+     * Constructor, you must pass a valid email and optionally an array of
      * parameters that can be as follows:
      *
      * <code>
@@ -127,10 +127,10 @@ class Services_Gravatar
      *     'default' => Services_Gravatar::DEFAULT_WAVATAR,
      * );
      * </code>
-     * 
+     *
      * @param string $email  Avatar email
      * @param array  $params Optional parameters (size, rating, default...)
-     * 
+     *
      * @return void
      * @throws Services_Gravatar_Exception If an invalid email is given.
      * @access public
@@ -144,13 +144,13 @@ class Services_Gravatar
             }
         }
     }
-    
+
     // }}}
     // getURL() {{{
-    
+
     /**
      * Returns the gravatar image URL.
-     * 
+     *
      * @return string
      */
     public function getURL()
@@ -182,15 +182,15 @@ class Services_Gravatar
         }
         return $url;
     }
-    
+
     // }}}
     // getHTML() {{{
-    
+
     /**
      * Returns the gravatar image html tag.
      *
      * @param array $params An array of img tag attributes (optional)
-     * 
+     *
      * @return string
      */
     public function getHTML(array $params = array())
@@ -202,13 +202,13 @@ class Services_Gravatar
         $return .= '/>';
         return $return;
     }
-    
+
     // }}}
     // getData() {{{
-    
+
     /**
      * Fetch image data and returns it.
-     * 
+     *
      * @return string
      * @throws Services_Gravatar_Exception When something goes wrong.
      */
@@ -230,14 +230,14 @@ class Services_Gravatar
         }
         return $response->getBody();
     }
-    
+
     // }}}
     // getRequest() {{{
-    
+
     /**
-     * Returns the HTTP_Request2 instance, if it's not yet set it is 
+     * Returns the HTTP_Request2 instance, if it's not yet set it is
      * instanciated on the fly.
-     * 
+     *
      * @return HTTP_Request2 The request
      * @see Services_Gravatar::$request
      */
@@ -249,13 +249,13 @@ class Services_Gravatar
         }
         return $this->request;
     }
-    
+
     // }}}
     // setRequest() {{{
-    
+
     /**
      * Sets the HTTP_Request2 instance.
-     * 
+     *
      * @param HTTP_Request2 $request The request to set
      *
      * @return void
@@ -265,6 +265,6 @@ class Services_Gravatar
     {
         $this->request = $request;
     }
-    
+
     // }}}
 }
