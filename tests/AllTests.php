@@ -11,11 +11,11 @@
  * through the world-wide-web at the following URI:
  * http://opensource.org/licenses/mit-license.php
  *
- * @category  Services 
+ * @category  Services
  * @package   Services_Gravatar
  * @author    David Jean Louis <izi@php.net>
  * @copyright 2008-2009 David Jean Louis
- * @license   http://opensource.org/licenses/mit-license.php MIT License 
+ * @license   http://opensource.org/licenses/mit-license.php MIT License
  * @version   CVS: $Id: AllTests.php,v 1.2 2009/01/23 14:21:58 izi Exp $
  * @link      http://pear.php.net/package/Services_Gravatar
  * @since     File available since release 0.1.0
@@ -41,7 +41,7 @@ require_once 'PHPUnit/TextUI/TestRunner.php';
  * @package   Services_Gravatar
  * @author    David Jean Louis <izi@php.net>
  * @copyright 2008-2009 David Jean Louis
- * @license   http://opensource.org/licenses/mit-license.php MIT License 
+ * @license   http://opensource.org/licenses/mit-license.php MIT License
  * @version   Release: @package_version@
  * @link      http://pear.php.net/package/Services_Gravatar
  * @since     Class available since release 0.1.0
